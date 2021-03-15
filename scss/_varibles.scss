@@ -1,0 +1,19 @@
+$grid-gutter-width:20px;
+$container-padding-x: $grid-gutter-width / 2;
+
+
+
+// Fonts
+$bFont:'Poppins', sans-serif;
+
+
+$theme-colors  :(
+    'primary':#1e7aeb,
+    'secondary':#1e1d85,
+    'success':#34bd91,
+    'danger':#cf5757,
+    'warning':#fdcb5f,
+    'info':#46b8ec,
+    'light':#f6f9fc,
+    'dark':#1e2e50
+)

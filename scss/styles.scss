@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+@import 'mixin';
+@import 'varibles';
+@import '../vendor/bootstrap/scss/bootstrap.scss';
+
+/* ------- Slick Slider CSS Start --------*/
+@import '../vendor/slick/slick.scss';
+@import '../vendor/slick/slick-theme.scss';
+/* ------- Slick Slider CSS End --------*/
+@import 'top-navbar'; 
+@import 'hero-header'; 
+
+/* ------- Main Scss --------*/
+
+:root {
+    --bs-font-sans-serif:#{$bFont};
+}
+
