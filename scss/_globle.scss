@@ -142,7 +142,7 @@ ul {
         @include transition;
         opacity: 0;
         border-radius: 50%;
-        box-shadow: 0 3px 6px rgba($dark,0.16), 0 3px 6px rgba($dark,0.23);
+        box-shadow: 0 3px 6px rgba($primary,0.16), 0 3px 6px rgba($primary,0.23);
         &.active{
             bottom: 20px;
             opacity: 1;
@@ -156,6 +156,7 @@ ul {
         font-weight: 500;
         color: $white;
         @include transition;
+        box-shadow: 0 3px 6px rgba($whatsapp,0.16), 0 3px 6px rgba($whatsapp,0.23);
         &.has-scroll{
             right: 70px;
         }

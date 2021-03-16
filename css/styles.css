@@ -13780,8 +13780,8 @@ ul.list-with-checkbox li:after {
   transition: all 0.2s ease-in-out;
   opacity: 0;
   border-radius: 50%;
-  -webkit-box-shadow: 0 3px 6px rgba(30, 46, 80, 0.16), 0 3px 6px rgba(30, 46, 80, 0.23);
-          box-shadow: 0 3px 6px rgba(30, 46, 80, 0.16), 0 3px 6px rgba(30, 46, 80, 0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(15, 209, 227, 0.16), 0 3px 6px rgba(15, 209, 227, 0.23);
+          box-shadow: 0 3px 6px rgba(15, 209, 227, 0.16), 0 3px 6px rgba(15, 209, 227, 0.23);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13804,6 +13804,8 @@ ul.list-with-checkbox li:after {
   color: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0 3px 6px rgba(6, 215, 85, 0.16), 0 3px 6px rgba(6, 215, 85, 0.23);
+          box-shadow: 0 3px 6px rgba(6, 215, 85, 0.16), 0 3px 6px rgba(6, 215, 85, 0.23);
 }
 
 @media (prefers-reduced-motion: reduce) {
