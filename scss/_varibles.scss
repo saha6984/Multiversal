@@ -4,16 +4,42 @@ $container-padding-x: $grid-gutter-width / 2;
 
 
 // Fonts
-$bFont:'Poppins', sans-serif;
+$bFont:'Poppins',sans-serif;
 
+$bFont:'Poppins',sans-serif;
+$primary:#0fd1e3;
+$secondary:#252382;
+$success:#34bd91;
+$info:#46b8ec;
+$warning:#fdcb5f;
+$danger:#cf5757;
+$light:#f6f9fc;
+$dark:#1e2e50;
+$orange:#fc7649;
 
-$theme-colors  :(
-    'primary':#1e7aeb,
-    'secondary':#1e1d85,
-    'success':#34bd91,
-    'danger':#cf5757,
-    'warning':#fdcb5f,
-    'info':#46b8ec,
-    'light':#f6f9fc,
-    'dark':#1e2e50
-)
+$theme-colors :(
+    'primary':$primary,
+    'secondary':$secondary,
+    'success':$success,
+    'danger':$danger,
+    'orange':$orange,
+    'warning':$warning,
+    'info':$info,
+    'light':$light,
+    'dark':$dark
+);
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 7.5,
+  9: $spacer * 9,
+  10: $spacer * 10.5,
+) !default;

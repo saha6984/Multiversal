@@ -3,18 +3,15 @@
 
 @import 'mixin';
 @import 'varibles';
-@import '../vendor/bootstrap/scss/bootstrap.scss';
+@import '../vendor/bootstrap/scss/bootstrap.scss'; 
 
 /* ------- Slick Slider CSS Start --------*/
 @import '../vendor/slick/slick.scss';
-@import '../vendor/slick/slick-theme.scss';
+@import '../vendor/slick/slick-theme.scss'; 
 /* ------- Slick Slider CSS End --------*/
+@import 'globle'; 
 @import 'top-navbar'; 
 @import 'hero-header'; 
+@import 'cards'; 
 
-/* ------- Main Scss --------*/
-
-:root {
-    --bs-font-sans-serif:#{$bFont};
-}
 

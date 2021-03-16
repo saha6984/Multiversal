@@ -1,0 +1,144 @@
+.cardHover {
+    box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, .12);
+    top: -5px;
+}
+
+.card {
+    border-radius: 5px;
+
+
+
+    &.card-hero-header {
+        position: relative;
+        $xl-padding: 2rem;
+        border: none;
+
+        .badge-feature {
+            top: -1rem;
+            left: 1rem;
+
+            .badge {
+                min-height: 1.6rem;
+                display: flex;
+                align-items: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-transform: uppercase;
+            }
+
+            @media (min-width:1200px) {
+                left: $xl-padding;
+            }
+        }
+
+        .card-body {
+            a {
+                text-decoration: none;
+                color: $dark;
+                @include transition;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            p {
+                color: $gray-600;
+            }
+
+            @media (min-width:1200px) {
+                padding: $xl-padding;
+            }
+        }
+
+        .card-footer {
+            background: $white;
+            border-color: $gray-200;
+
+            @media (min-width:1200px) {
+                padding-left: $xl-padding;
+                padding-right: $xl-padding;
+
+            }
+
+            .icon {
+                font-size: 1rem;
+            }
+
+            .info {
+                padding: .8rem 0;
+                font-size: .9rem;
+                display: flex;
+                align-items: center;
+                color: $gray-600;
+            }
+        }
+    }
+
+    &.card-vision {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05);
+        border: none;
+        position: relative;
+        top: 0;
+        cursor: pointer;
+        @include transition;
+
+        .icon {
+            font-size: 2.8rem;
+        }
+
+        h4 {
+            color: $secondary;
+        }
+
+        &:hover {
+            @extend .cardHover;
+        }
+    }
+
+    &.card-properties {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05);
+        border-color: $gray-100;
+        position: relative;
+        text-decoration: none;
+        top: 0;
+        @include transition;
+
+        .card-body {
+            .card-title {
+                color: $dark;
+                @include transition;
+            }
+
+            p {
+                color: $gray-600;
+            }
+        }
+
+        .card-header,
+        .card-footer {
+            border-color: $gray-100;
+            background: $white;
+
+            @media (min-width:1200px) {
+                padding-top: $spacer;
+                padding-bottom: $spacer;
+            }
+        }
+
+        .card-footer {
+            color: $gray-600;
+        }
+
+        &:hover {
+            @extend .cardHover;
+
+            .card-body {
+                .card-title {
+                    color: $primary;
+
+                }
+            }
+        }
+    }
+}

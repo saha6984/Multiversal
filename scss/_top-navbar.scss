@@ -1,7 +1,7 @@
 header {
     &.top-navbar {
         .top-strip-bar {
-            background-color: darken(map-get($theme-colors, secondary), 10);
+            background-color: darken($secondary, 5);
             color: rgba($white, .8);
             font-size: .8rem;
 
@@ -29,6 +29,101 @@ header {
                 a {
                     &+a {
                         margin-left: .3rem;
+                    }
+                }
+            }
+        }
+        .navbar-brand{
+            img{
+                height: 54px;
+            }
+        }
+
+        .navbar-nav {
+            $linkPadding: 1.5rem;
+            
+            .nav-item {
+                .nav-link {
+                    font-size: .9rem;
+                    position: relative;
+                    
+
+                    &:before {
+                        position: absolute;
+                        width: 0;
+                        height: 3px;
+                        @include transition;
+                        content: "";
+                        left: $linkPadding;
+                        bottom: 0;
+                        background: $primary;
+
+                    }
+
+                    @media (min-width:1200px) {
+                        padding-left: $linkPadding;
+                        padding-right: $linkPadding;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        color: $white;
+
+                    }
+
+                    &.active {}
+                }
+
+                @media (min-width:1200px) {
+                    &:hover {
+                        .nav-link {
+                            &:before {
+                                width: calc(100% - #{$linkPadding*2});
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (min-width:1200px) {
+                .dropdown {
+                    .dropdown-menu {
+                        margin: 0;
+                        padding: 0;
+                        font-size: .875rem;
+                        color: #696969;
+                        background-color: #fff;
+                        border: 0 solid rgba(0, 0, 0, .15);
+                        border-radius: 5px;
+                        box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, .15);
+
+
+                        li {
+                            .dropdown-item {
+                                padding-top: .7rem;
+                                padding-bottom: .7rem;
+                                @include transition;
+
+                            }
+
+                            &:first-child {
+                                .dropdown-item {
+                                    border-radius: 5px 5px 0 0;
+                                }
+                            }
+
+                            &:last-child {
+                                .dropdown-item {
+                                    border-radius: 0 0 5px 5px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &:hover {
+                        .dropdown-menu {
+                            display: block;
+                            margin-top: 0; // remove the gap so it doesn't close
+                        }
                     }
                 }
             }

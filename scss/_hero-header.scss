@@ -3,3 +3,33 @@
     background-size: cover;
     background-position: center;
 }
+
+.custom-vh-04 {
+    min-height: calc(100vh - 130px);
+}
+
+.hero-header {
+    .slick-slider {
+        .slick-dots {
+            bottom: 2rem;
+
+            li {
+                button {
+                    &:before {
+                        font-size: .8rem;
+                        @include transition;
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: $primary;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
