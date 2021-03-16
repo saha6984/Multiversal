@@ -12,24 +12,7 @@
     .slick-slider {
         .slick-dots {
             bottom: 2rem;
-
-            li {
-                button {
-                    &:before {
-                        font-size: .8rem;
-                        @include transition;
-                    }
-                }
-
-                &.slick-active {
-                    button {
-                        &:before {
-                            color: $primary;
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
         }
     }
 }
+

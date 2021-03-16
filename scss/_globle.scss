@@ -9,6 +9,27 @@ body {
     font-weight: 400;
     color: $gray-600;
     line-height: 1.86;
+    overflow: overlay;
+}
+
+
+
+/* Width Height */
+::-webkit-scrollbar {
+    width: $spacer/2;
+    height: $spacer/2;
+    background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(lighten($dark, 40), $alpha: .7);
+    border-radius: 10px;
 }
 
 .badge {
@@ -21,11 +42,11 @@ body {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 3px;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 
-.section-title {
+.section-heading-content {
     .ls-2 {
         letter-spacing: 2.6px;
     }
@@ -62,4 +83,81 @@ body {
     background-position: left, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
+}
+
+ul {
+    &.list-with-checkbox {
+        margin: 0 0 0 $spacer;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width:1200px) {
+            margin-top: $spacer*3;
+        }
+
+        li {
+            position: relative;
+            padding-left: $spacer*2;
+            padding-top: $spacer/2;
+            padding-bottom: $spacer/2;
+            font-size: 1rem;
+            $iconTop: 4px;
+            $iconFs:1.2rem;
+            &:before {
+                position: absolute;
+                left: 0;
+                content: "\f14a";
+                font-family: 'font awesome 5 duotone';
+                width: $spacer;
+                height: $spacer;
+                top: $iconTop;
+                color: $primary;
+                font-size: $iconFs;
+            }
+
+            &:after {
+                content: "\10f14a";
+                color: $primary;
+                opacity: .2;
+                font-family: 'font awesome 5 duotone';
+                width: $spacer;
+                height: $spacer;
+                position: absolute;
+                left: 0;
+                top: $iconTop;
+                font-size: $iconFs;
+            }
+
+
+        }
+    }
+}
+
+.btn{
+    &.scrollToTop{
+        position: fixed;
+        bottom: -50px;
+        right: 20px;
+        z-index: 9999;
+        @include transition;
+        opacity: 0;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba($dark,0.16), 0 3px 6px rgba($dark,0.23);
+        &.active{
+            bottom: 20px;
+            opacity: 1;
+        }
+        
+    }
+    &.btn-whatsapp{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-weight: 500;
+        color: $white;
+        @include transition;
+        &.has-scroll{
+            right: 70px;
+        }
+    }
 }

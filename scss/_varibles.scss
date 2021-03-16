@@ -6,7 +6,7 @@ $container-padding-x: $grid-gutter-width / 2;
 // Fonts
 $bFont:'Poppins',sans-serif;
 
-$bFont:'Poppins',sans-serif;
+// Colors
 $primary:#0fd1e3;
 $secondary:#252382;
 $success:#34bd91;
@@ -16,7 +16,7 @@ $danger:#cf5757;
 $light:#f6f9fc;
 $dark:#1e2e50;
 $orange:#fc7649;
-
+$whatsapp:#06d755;
 $theme-colors :(
     'primary':$primary,
     'secondary':$secondary,
@@ -26,9 +26,11 @@ $theme-colors :(
     'warning':$warning,
     'info':$info,
     'light':$light,
+    'whatsapp':$whatsapp,
     'dark':$dark
 );
 
+// Sizing
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
