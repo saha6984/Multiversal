@@ -1,17 +1,18 @@
 header {
     &.top-navbar {
         .top-strip-bar {
-            background-color: darken($secondary, 5);
+            background-color: $light;
             color: rgba($white, .8);
             font-size: .8rem;
 
             a {
-                color: rgba($white, .8);
+                color: rgba($dark, .8);
                 text-decoration: none;
+                font-weight: 600;
                 @include transition;
 
                 &:hover {
-                    color: $white;
+                    color: $dark;
                 }
             }
 
@@ -33,20 +34,44 @@ header {
                 }
             }
         }
-        .navbar-brand{
-            img{
-                height: 54px;
+
+        nav {
+            &.navbar {
+                // padding: 0;
+
+                .navbar-brand {
+                    img {
+                        height: 64px;
+                    }
+
+                    &.navbar-brand-with-bg {
+                        // background: $white;
+                        // background: darken($primary, 20);
+                        // background: $white;
+                        // padding: $spacer/1.2;
+                    }
+                }
             }
         }
 
+
+
         .navbar-nav {
             $linkPadding: 1.5rem;
-            
+
             .nav-item {
                 .nav-link {
                     font-size: .9rem;
                     position: relative;
-                    
+
+                    &.active {
+                        color: $danger;
+
+                        &:before {
+                            width: calc(100% - #{$linkPadding*2});
+                        }
+                    }
+
 
                     &:before {
                         position: absolute;
@@ -56,7 +81,7 @@ header {
                         content: "";
                         left: $linkPadding;
                         bottom: 0;
-                        background: $primary;
+                        background: $danger;
 
                     }
 
@@ -65,16 +90,18 @@ header {
                         padding-right: $linkPadding;
                         padding-top: 1rem;
                         padding-bottom: 1rem;
-                        color: $white;
+                        color: $dark;
 
                     }
 
-                    &.active {}
+
                 }
 
                 @media (min-width:1200px) {
                     &:hover {
                         .nav-link {
+                            color: $danger;
+
                             &:before {
                                 width: calc(100% - #{$linkPadding*2});
                             }
@@ -93,7 +120,7 @@ header {
                         background-color: #fff;
                         border: 0 solid rgba(0, 0, 0, .15);
                         border-radius: 5px;
-                        box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, .15);
+                        box-shadow: 0 1.5rem 4rem rgba($dark, .3);
 
 
                         li {
