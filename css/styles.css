@@ -10341,6 +10341,10 @@ textarea.form-control-lg {
 :root {
   --bs-font-sans-serif:Poppins, sans-serif; }
 
+html,
+body {
+  height: 100%; }
+
 body {
   font-size: .875rem;
   font-weight: 400;
@@ -10348,8 +10352,12 @@ body {
   line-height: 1.86;
   overflow: overlay; }
 
-section {
-  overflow: hidden; }
+.mtn-fti-atitle {
+  margin-top: -13rem; }
+
+::selection {
+  color: #fff;
+  background: #e8391a; }
 
 /* Width Height */
 ::-webkit-scrollbar {
@@ -10365,6 +10373,10 @@ section {
 ::-webkit-scrollbar-thumb {
   background: rgba(139, 139, 139, 0.7);
   border-radius: 10px; }
+
+.pr-z3 {
+  position: relative;
+  z-index: 3; }
 
 .badge {
   display: inline-block;
@@ -10397,11 +10409,53 @@ section {
     left: 50%;
     transform: translateX(-50%); }
 
+.bg-img-center-cover, .bg-img-cover-center {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .bg-lr-image-01 {
   background-image: url(../imgs/BG7.png), url(../imgs/BG8.png);
   background-position: left, right bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto; }
+
+.bg-overlay {
+  position: relative; }
+  .bg-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 37, 0.47);
+    z-index: 1;
+    border-radius: inherit; }
+  .bg-overlay .container,
+  .bg-overlay > div {
+    position: relative;
+    z-index: 2; }
+
+.bg-img-cover-center {
+  background-image: url(../imgs/BG3.jpg); }
+
+.inner-page-title .breadcrumb {
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase; }
+  .inner-page-title .breadcrumb a {
+    color: white;
+    text-decoration: none; }
+  .inner-page-title .breadcrumb .active {
+    color: rgba(255, 255, 255, 0.8); }
+.inner-page-title h1, .inner-page-title .h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff; }
+  @media (min-width: 1200px) {
+    .inner-page-title h1, .inner-page-title .h1 {
+      font-size: 5rem; } }
 
 ul.list-with-checkbox {
   margin: 0 0 0 1rem;
@@ -10442,11 +10496,11 @@ ul.list-with-checkbox {
   position: fixed;
   bottom: -50px;
   right: 20px;
-  z-index: 9999;
   transition: all 0.2s ease-in-out;
   opacity: 0;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(17, 163, 255, 0.16), 0 3px 6px rgba(19, 98, 148, 0.23); }
+  box-shadow: 0 3px 6px rgba(17, 163, 255, 0.16), 0 3px 6px rgba(19, 98, 148, 0.23);
+  z-index: 1050; }
   @media (prefers-reduced-motion: reduce) {
     .btn.scrollToTop {
       transition: none; } }
@@ -10460,6 +10514,7 @@ ul.list-with-checkbox {
   font-weight: 500;
   color: #fff;
   transition: all 0.2s ease-in-out;
+  z-index: 1050;
   box-shadow: 0 3px 6px rgba(6, 215, 85, 0.16), 0 3px 6px rgba(6, 215, 85, 0.23); }
   @media (prefers-reduced-motion: reduce) {
     .btn.btn-whatsapp {
@@ -10490,7 +10545,7 @@ header.top-navbar {
       header.top-navbar .top-strip-bar .social-info a + a {
         margin-left: .3rem; }
   header.top-navbar nav.navbar .navbar-brand img {
-    height: 44px; }
+    height: 50px; }
   header.top-navbar .navbar-nav .nav-item .nav-link {
     font-size: .9rem;
     position: relative; }
@@ -10560,12 +10615,20 @@ header.top-navbar {
 .hero-header .slick-slider .slick-dots {
   bottom: 2rem; }
 
-.cardHover, .card.card-vision:hover, .card.card-properties:hover {
+.cardHover, .card.card-hover:hover, .card.card-vision:hover, .card.card-properties:hover {
   box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.12);
   top: -5px; }
 
 .card {
   border-radius: 5px; }
+  .card.card-hover {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0);
+    position: relative;
+    top: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      .card.card-hover {
+        transition: none; } }
   .card.card-hero-header {
     position: relative;
     border: none; }
@@ -10752,7 +10815,8 @@ header.top-navbar {
       min-height: 3rem; }
 
 .main-footer {
-  color: #adb5bd; }
+  color: #adb5bd;
+  margin-top: auto !important; }
   .main-footer a {
     text-decoration: none;
     color: #adb5bd;

@@ -1,6 +1,7 @@
 header {
     &.top-navbar {
         line-height: 1.2;
+
         .top-strip-bar {
             background-color: $light;
             color: rgba($white, .8);
@@ -38,18 +39,10 @@ header {
 
         nav {
             &.navbar {
-                // padding: 0;
 
                 .navbar-brand {
                     img {
-                        height: 44px;
-                    }
-
-                    &.navbar-brand-with-bg {
-                        // background: $white;
-                        // background: darken($primary, 20);
-                        // background: $white;
-                        // padding: $spacer/1.2;
+                        height: 50px;
                     }
                 }
             }

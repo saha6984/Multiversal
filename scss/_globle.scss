@@ -4,6 +4,11 @@
     --bs-font-sans-serif:#{$bFont};
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-size: .875rem;
     font-weight: 400;
@@ -11,9 +16,17 @@ body {
     line-height: 1.86;
     overflow: overlay;
 }
-section{
-    overflow: hidden;
+.mtn-fti-atitle{
+    margin-top: -$spacer*13;
 }
+
+// section {
+//     overflow: hidden;
+// }
+::selection {
+    color: $white;
+    background:$danger;
+  }
 
 
 
@@ -33,6 +46,11 @@ section{
 ::-webkit-scrollbar-thumb {
     background: rgba(lighten($dark, 40), $alpha: .7);
     border-radius: 10px;
+}
+
+.pr-z3{
+    position: relative;
+    z-index: 3;
 }
 
 .badge {
@@ -81,11 +99,69 @@ section{
     }
 }
 
+.bg-img-center-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .bg-lr-image-01 {
     background-image: url(../imgs/BG7.png), url(../imgs/BG8.png);
     background-position: left, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
+
+}
+
+.bg-overlay {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($dark, .47);
+        z-index: 1;
+        border-radius: inherit;
+    }
+
+    .container,
+    >div {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.bg-img-cover-center {
+    background-image: url(../imgs/BG3.jpg);
+    @extend .bg-img-center-cover;
+}
+
+.inner-page-title{
+    .breadcrumb{
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+        a{
+            color: rgba($white, 1);
+            text-decoration: none;
+            
+        }
+        .active{
+            color: rgba($white, .8);
+        }
+    }
+    h1{
+        font-size: 3rem;
+        font-weight: 300;
+        color: $white;
+        @media (min-width:1200px) {
+            font-size: 5rem;
+        }
+    }
 }
 
 ul {
@@ -105,7 +181,8 @@ ul {
             padding-bottom: $spacer/2;
             font-size: 1rem;
             $iconTop: 4px;
-            $iconFs:1.2rem;
+            $iconFs: 1.2rem;
+
             &:before {
                 position: absolute;
                 left: 0;
@@ -136,32 +213,36 @@ ul {
     }
 }
 
-.btn{
-    &.scrollToTop{
+.btn {
+    &.scrollToTop {
         position: fixed;
         bottom: -50px;
         right: 20px;
-        z-index: 9999;
         @include transition;
         opacity: 0;
         border-radius: 50%;
-        box-shadow: 0 3px 6px rgba($primary,0.16), 0 3px 6px rgba($secondary,0.23);
+        box-shadow: 0 3px 6px rgba($primary, 0.16), 0 3px 6px rgba($secondary, 0.23);
+        z-index: 1050;
+
         // color: $white;
-        &.active{
+        &.active {
             bottom: 20px;
             opacity: 1;
         }
-        
+
     }
-    &.btn-whatsapp{
+
+    &.btn-whatsapp {
         position: fixed;
         bottom: 20px;
         right: 20px;
         font-weight: 500;
         color: $white;
         @include transition;
-        box-shadow: 0 3px 6px rgba($whatsapp,0.16), 0 3px 6px rgba($whatsapp,0.23);
-        &.has-scroll{
+        z-index: 1050;
+        box-shadow: 0 3px 6px rgba($whatsapp, 0.16), 0 3px 6px rgba($whatsapp, 0.23);
+
+        &.has-scroll {
             right: 70px;
         }
     }
