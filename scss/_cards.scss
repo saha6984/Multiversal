@@ -11,7 +11,8 @@
         box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0);
         position: relative;
         top: 0;
-        &:hover{
+
+        &:hover {
             @extend .cardHover
         }
     }
@@ -104,6 +105,7 @@
             @extend .cardHover;
         }
     }
+
 
     &.card-properties {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05);
@@ -210,6 +212,35 @@
                     margin-bottom: $spacer*2;
                 }
             }
+
+        }
+    }
+
+    &.card-overview {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .0);
+        border: none;
+        position: relative;
+        top: 0;
+        cursor: pointer;
+        @include transition;
+
+        .icon {
+            font-size: 3rem;
+
+        }
+
+        h4 {
+            color: $secondary;
+        }
+
+        &:hover {
+            @extend .cardHover;
+        }
+        @media (min-width:1200px) {
+         .icon{
+             padding-top: 2rem;
+             font-size: 4rem;
+         }
 
         }
     }
