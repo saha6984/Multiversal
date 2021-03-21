@@ -1,0 +1,32 @@
+.mixitup-controls {
+    margin-top: -$spacer*5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .control {
+        text-transform: uppercase;
+        margin: 0 2px;
+        height: $spacer*2;
+        border: none;
+        padding: 0 $spacer;
+        background: transparent;
+        @include transition;
+        color: lighten($dark, 40);
+        font-weight: 500;
+
+        @media (min-width:767px) {
+            padding: 0 $spacer*2;
+        }
+        &:hover{
+            &:not(.mixitup-control-active){
+                background: $light;
+            }
+        }
+
+        &.mixitup-control-active {
+            background: $light;
+            color: $secondary;
+        }
+    }
+}
