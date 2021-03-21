@@ -113,6 +113,13 @@ body {
 
 }
 
+.bg-lr-image-02 {
+    background-image: url(../imgs/bg-title-01.png),url(../imgs/bg-title-02.png);
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+}
+
 .bg-overlay {
     position: relative;
 
@@ -146,20 +153,33 @@ body {
         font-weight: 400;
         text-transform: uppercase;
         a{
-            color: rgba($white, 1);
+            color: rgba($dark, 1);
             text-decoration: none;
             
         }
         .active{
-            color: rgba($white, .8);
+            color: rgba($dark, .8);
         }
     }
     h1{
         font-size: 3rem;
         font-weight: 300;
-        color: $white;
+        color: $dark;
         @media (min-width:1200px) {
             font-size: 5rem;
+        }
+    }
+    &:not(.bg-white){
+        .breadcrumb{
+            a{
+                color: rgba($white, 1);
+            }
+            .active{
+                color: rgba($white, .8);
+            }
+        }
+        h1{
+            color: $white;
         }
     }
 }

@@ -236,12 +236,83 @@
         &:hover {
             @extend .cardHover;
         }
+
         @media (min-width:1200px) {
-         .icon{
-             padding-top: 2rem;
-             font-size: 4rem;
-         }
+            .icon {
+                padding-top: 2rem;
+                font-size: 4rem;
+            }
 
         }
     }
+
+    &.card-team {
+        overflow: hidden;
+        .user-img {
+            .contact-info {
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    opacity: .8;
+                    @include transition;
+
+                    .icon {
+                        color: $primary;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+
+        .card-body {
+            .card-title {
+                @include transition;
+                display: block;
+                text-decoration: none;
+
+                &:not(:hover) {
+                    color: $dark
+                }
+            }
+        }
+
+        .social-info {
+            $btnSize: 32px;
+
+            .btn {
+                border: 1px solid lighten($dark, 83);
+                background: lighten($dark, 83);
+                width: $btnSize;
+                height: $btnSize;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: lighten($dark, 50);
+                @include transition;
+                &:hover{
+                    border: 1px solid lighten($dark, 20);
+                    background: lighten($dark, 20); 
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.card-img-overlay {
+    @include positionFill();
+    @include transition;
+    background: rgba($dark, 0);
+    opacity: 0;
+
+    &:hover {
+        background: rgba($dark, .7);
+        opacity: 1;
+    }
+
 }

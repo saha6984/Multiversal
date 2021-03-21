@@ -10420,6 +10420,12 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto; }
 
+.bg-lr-image-02 {
+  background-image: url(../imgs/bg-title-01.png), url(../imgs/bg-title-02.png);
+  background-position: left bottom, right top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto; }
+
 .bg-overlay {
   position: relative; }
   .bg-overlay:before {
@@ -10445,17 +10451,23 @@ body {
   font-weight: 400;
   text-transform: uppercase; }
   .inner-page-title .breadcrumb a {
-    color: white;
+    color: #252525;
     text-decoration: none; }
   .inner-page-title .breadcrumb .active {
-    color: rgba(255, 255, 255, 0.8); }
+    color: rgba(37, 37, 37, 0.8); }
 .inner-page-title h1, .inner-page-title .h1 {
   font-size: 3rem;
   font-weight: 300;
-  color: #fff; }
+  color: #252525; }
   @media (min-width: 1200px) {
     .inner-page-title h1, .inner-page-title .h1 {
       font-size: 5rem; } }
+.inner-page-title:not(.bg-white) .breadcrumb a {
+  color: white; }
+.inner-page-title:not(.bg-white) .breadcrumb .active {
+  color: rgba(255, 255, 255, 0.8); }
+.inner-page-title:not(.bg-white) h1, .inner-page-title:not(.bg-white) .h1 {
+  color: #fff; }
 
 ul.list-with-checkbox {
   margin: 0 0 0 1rem;
@@ -10771,6 +10783,64 @@ header.top-navbar {
       .card.card-overview .icon {
         padding-top: 2rem;
         font-size: 4rem; } }
+  .card.card-team {
+    overflow: hidden; }
+    .card.card-team .user-img .contact-info a {
+      text-decoration: none;
+      color: #fff;
+      opacity: .8;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .card.card-team .user-img .contact-info a {
+          transition: none; } }
+      .card.card-team .user-img .contact-info a .icon {
+        color: #11a3ff; }
+      .card.card-team .user-img .contact-info a:hover {
+        opacity: 1; }
+    .card.card-team .card-body .card-title {
+      transition: all 0.2s ease-in-out;
+      display: block;
+      text-decoration: none; }
+      @media (prefers-reduced-motion: reduce) {
+        .card.card-team .card-body .card-title {
+          transition: none; } }
+      .card.card-team .card-body .card-title:not(:hover) {
+        color: #252525; }
+    .card.card-team .social-info .btn {
+      border: 1px solid #f9f9f9;
+      background: #f9f9f9;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a5a5a5;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .card.card-team .social-info .btn {
+          transition: none; } }
+      .card.card-team .social-info .btn:hover {
+        border: 1px solid #585858;
+        background: #585858;
+        color: #fff; }
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 0.2s ease-in-out;
+  background: rgba(37, 37, 37, 0);
+  opacity: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    .card-img-overlay {
+      transition: none; } }
+  .card-img-overlay:hover {
+    background: rgba(37, 37, 37, 0.7);
+    opacity: 1; }
 
 .slick-dots li button:before {
   font-size: .8rem;
@@ -10831,6 +10901,33 @@ header.top-navbar {
     border-color: #d7e5f2; }
     .contact-form .form-group .form-control:not(.form-control-sm) {
       min-height: 3rem; }
+
+.mixitup-controls {
+  margin-top: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .mixitup-controls .control {
+    text-transform: uppercase;
+    margin: 0 2px;
+    height: 2rem;
+    border: none;
+    padding: 0 1rem;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    color: #8b8b8b;
+    font-weight: 500; }
+    @media (prefers-reduced-motion: reduce) {
+      .mixitup-controls .control {
+        transition: none; } }
+    @media (min-width: 767px) {
+      .mixitup-controls .control {
+        padding: 0 2rem; } }
+    .mixitup-controls .control:hover:not(.mixitup-control-active) {
+      background: #f6f9fc; }
+    .mixitup-controls .control.mixitup-control-active {
+      background: #f6f9fc;
+      color: #136294; }
 
 .main-footer {
   color: #adb5bd;

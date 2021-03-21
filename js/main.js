@@ -1,6 +1,6 @@
 (function ($) {
   "use strict";
-  
+
   var $body = $('body'),
     $window = $(window),
     $document = $(document),
@@ -9,6 +9,9 @@
     $slickSliderMultiple = $('.multiple-items'),
     $slickSlidertestimonial = $('.testimonial-container'),
     $btnWhatsapp = $('.btn-whatsapp');
+  $mixItUpGallery = $('.mixitup-container');
+
+
 
   $document.ready(function () {
 
@@ -116,6 +119,14 @@
     }
 
   });
+
+  if ($mixItUpGallery.length > 0) {
+    var $mixItUpGallery = document.querySelector('.mixitup-container');
+    var mixer = mixitup($mixItUpGallery);
+  }
+
+
+
 
 
 })(jQuery);
