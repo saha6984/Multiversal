@@ -2,8 +2,10 @@
     margin-top: -$spacer*5;
     display: flex;
     align-items: center;
-    justify-content: center; 
-
+    @media (min-width:767px) {
+        justify-content: center;
+    }
+    overflow-x: auto;
     .control {
         text-transform: uppercase;
         margin: 0 2px;
@@ -14,12 +16,14 @@
         @include transition;
         color: lighten($dark, 40);
         font-weight: 500;
+        white-space: nowrap;
 
         @media (min-width:767px) {
             padding: 0 $spacer*2;
         }
-        &:hover{
-            &:not(.mixitup-control-active){
+
+        &:hover {
+            &:not(.mixitup-control-active) {
                 background: $light;
             }
         }

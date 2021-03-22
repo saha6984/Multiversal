@@ -10906,7 +10906,10 @@ header.top-navbar {
   margin-top: -5rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  overflow-x: auto; }
+  @media (min-width: 767px) {
+    .mixitup-controls {
+      justify-content: center; } }
   .mixitup-controls .control {
     text-transform: uppercase;
     margin: 0 2px;
@@ -10916,7 +10919,8 @@ header.top-navbar {
     background: transparent;
     transition: all 0.2s ease-in-out;
     color: #8b8b8b;
-    font-weight: 500; }
+    font-weight: 500;
+    white-space: nowrap; }
     @media (prefers-reduced-motion: reduce) {
       .mixitup-controls .control {
         transition: none; } }
@@ -10926,6 +10930,40 @@ header.top-navbar {
     .mixitup-controls .control:hover:not(.mixitup-control-active) {
       background: #f6f9fc; }
     .mixitup-controls .control.mixitup-control-active {
+      background: #f6f9fc;
+      color: #136294; }
+
+.nav.nav-project-details {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  overflow-x: auto; }
+  @media (min-width: 767px) {
+    .nav.nav-project-details {
+      justify-content: center; } }
+  .nav.nav-project-details .nav-link {
+    text-transform: uppercase;
+    margin: 0 2px;
+    height: 2rem;
+    border: none;
+    padding: 0 1rem;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    color: #8b8b8b;
+    font-weight: 500;
+    white-space: nowrap;
+    display: flex;
+    align-items: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .nav.nav-project-details .nav-link {
+        transition: none; } }
+    @media (min-width: 767px) {
+      .nav.nav-project-details .nav-link {
+        padding: 0 2rem; } }
+    .nav.nav-project-details .nav-link:hover:not(.active) {
+      background: #f6f9fc; }
+    .nav.nav-project-details .nav-link.active {
       background: #f6f9fc;
       color: #136294; }
 

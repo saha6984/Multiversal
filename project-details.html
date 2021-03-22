@@ -20,11 +20,11 @@
   <!-- Custom styles for this template -->
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" data-bs-spy="scroll" data-bs-target="#subnavbar-items" data-bs-offset="30" tabindex="0">
   <a class="visually-hidden" id="home-section"></a>
   <header class="top-navbar">
     <!-- Fixed navbar -->
-        <div class="top-strip-bar py-1 d-none d-xl-block">
+    <div class="top-strip-bar py-1 d-none d-xl-block">
       <div class="container d-xl-flex justify-content-between align-items-center">
         <div class="contact-info">
           <a href="tel:919945196777"> <i class="far fa-phone me-1"></i>+91 9945196777</a>
@@ -89,88 +89,58 @@
       </div>
     </nav>
   </header>
+  
 
   <!-- Begin page content -->
   <main class="content-main-container">
 
-    <section class="pt-3 pt-xl-4 pb-10 inner-page-title bg-overlay bg-img-cover-center">
+    <section class="pt-3 pt-xl-4 inner-page-title bg-white pr-z3" >
       <div class="container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
+        <nav aria-label="breadcrumb" class="wow bounceInDown" data-wow-duration="1s" data-wow-delay="0s">
+          <ol class="breadcrumb justify-content-center pt-3 pt-lg-6">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">About Us - Overview</li>
+            <li class="breadcrumb-item"><a href="projects-residential.html">Project Residential</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Project Details </li>
           </ol>
         </nav>
 
-        <h1 class="text-xl-center py-3 py-xl-7 m-0 wow bounceInDown" data-wow-duration="1s" data-wow-delay="0s">Overview
-        </h1>
-
+        <h2 class="text-center text-dark pb-5 pb-xl-7 m-0 wow bounceInDown" data-wow-duration="1s" data-wow-delay=".2s">
+          Home in Metric Way - Plans are worthless
+        </h2>
       </div>
     </section>
-    <section class="bg-lr-image-01 py-5 py-xl-6 pr-z3">
-      <div class="container">
-        <div class="card mtn-fti-atitle border-0">
-          <div class="card-body pt-5 pt-xl-6 px-lg-6">
-            <div class="row align-items-center">
-              <div class="col-12 col-lg-8  order-1 order-lg-2">
-                <div class="section-heading-content ms-lg-7">
-                  <p class="m-0 text-uppercase text-primary ls-2">WHO WE ARE ?</p>
-                  <h2 class="h2 text-dark mb-5 fadeInUp wow" data-wow-duration=".4s" data-wow-delay="0s">Overview</h2>
-                  <p class="fadeInUp wow" data-wow-duration=".4s" data-wow-delay=".2s">Properties is a new generation,
-                    Nellore-based, real-estate development company. We create functional, user-centric spaces that are
-                    environmentally sustainable using materials of the highest quality and engineering excellence.
-                    Bhavani’s experience in delivering residential and commercial projects is built on the core values
-                    that are embedded in us from the blueprint to brick. With the unwavering confidence in the mantra
-                    that ‘only good quality and great design stands the test of time’, we continue to deliver to
-                    hundreds of happy customers.</p>
-                  <ul class="list-with-checkbox">
-                    <li class="fadeInUp wow" data-wow-duration=".4s" data-wow-delay=".4s">To be most customer centric
-                      company</li>
-                    <li class="fadeInUp wow" data-wow-duration=".4s" data-wow-delay=".6s">To make buying/construction of
-                      your dream property as simple and transparent as buying products
-                      online</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg order-2 order-lg-1 slideInLeft wow" data-wow-duration=".8s" data-wow-delay="0s">
-                <img class="w-100" src="imgs/overview-01.svg" alt="">
-              </div>
-            </div>
-            <hr class="bg-light mt-lg-5">
+    <nav class="position-sticky top-0 pr-z3 bg-white" id="subnavbar-items">
+      <ul class="nav nav-project-details" >
+        <li class="nav-item">
+          <a class="nav-link" href="#overview">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#amenities">Amenities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#plans">Plans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#video">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#location">Location</a>
+        </li>
+      </ul>
+    </nav>
 
-            <div class="row gx-lg-7">
-              <div class="col-sm-6 my-4">
-                <div class="card card-overview h-100 text-center px-lg-4">
-                  <div class="icon">
-                    <i class="fad fa-pennant text-primary icon"></i>
-                  </div>
-                  <div class="card-body ">
-                    <h4 class="text-dark">Mission</h4>
-                    <p>To rise above status quo by creating best-in-class living and working spaces that are
-                      contemporary in design, ergonomic, environmentally sustainable and constructed using materials of
-                      the highest quality and engineering excellence with a commitment to timelines</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 my-4">
-                <div class="card card-overview h-100 text-center px-lg-4">
-                  <div class="icon">
-                    <i class="fad fa-telescope text-primary icon"></i>
-                  </div>
-                  <div class="card-body ">
-                    <h4 class="text-dark">Vision</h4>
-                    <p>To be a brand that is admired as an industry leader for its thoughtfully designed, high quality,
-                      innovative life-spaces, is recognized for its customer and people practices, We are in pursuit of
-                      Customer Delight through Excellence in product, highest standards in Quality</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+    <section class="py-5 py-xl-6 bg-light" id="overview">
+      <div class="container"></div>
     </section>
-
+    <section class="py-5 py-xl-6 bg-primary" id="amenities"></section>
+    <section class="py-5 py-xl-6 bg-info" id="plans"></section>
+    <section class="py-5 py-xl-6 bg-light" id="gallery"></section>
+    <section class="py-5 py-xl-6 bg-primary" id="video"></section>
+    <section class="py-5 py-xl-6 bg-info" id="location"></section>
 
 
 
@@ -266,6 +236,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="vendor/slick/slick.min.js"></script>
   <script src="vendor/wow/wow.min.js"></script>
+  <script src="vendor/mixitup/mixitup.min.js"></script>
   <script src="js/main.js"></script>
 
 

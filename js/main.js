@@ -8,8 +8,17 @@
     $slickSlider = $('.slick-slider'),
     $slickSliderMultiple = $('.multiple-items'),
     $slickSlidertestimonial = $('.testimonial-container'),
-    $btnWhatsapp = $('.btn-whatsapp');
-  $mixItUpGallery = $('.mixitup-container');
+    $btnWhatsapp = $('.btn-whatsapp'),
+    $mixItUpGallery = $('.mixitup-container');
+
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#subnavbar-items',
+    offset: 500
+  });
+
+
+
+
 
 
 

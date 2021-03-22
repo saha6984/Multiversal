@@ -1,0 +1,42 @@
+.nav {
+    &.nav-project-details{
+        position: sticky;
+        top: 0;
+        // margin-top: -$spacer*5;  
+        display: flex;
+        align-items: center;
+        @media (min-width:767px) {
+            justify-content: center;
+        }
+        overflow-x: auto;
+        .nav-link {
+            text-transform: uppercase;
+            margin: 0 2px;
+            height: $spacer*2;
+            border: none;
+            padding: 0 $spacer;
+            background: transparent;
+            @include transition;
+            color: lighten($dark, 40);
+            font-weight: 500;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+    
+            @media (min-width:767px) {
+                padding: 0 $spacer*2;
+            }
+    
+            &:hover {
+                &:not(.active) {
+                    background: $light;
+                }
+            }
+    
+            &.active {
+                background: $light;
+                color: $secondary;
+            }
+        }
+    }
+}
