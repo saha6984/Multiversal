@@ -13,7 +13,7 @@
 
   var scrollSpy = new bootstrap.ScrollSpy(document.body, {
     target: '#subnavbar-items',
-    offset: 500
+    offset: 30
   });
 
 
