@@ -2,10 +2,13 @@
     margin-top: -$spacer*5;
     display: flex;
     align-items: center;
+
     @media (min-width:767px) {
         justify-content: center;
     }
+
     overflow-x: auto;
+
     .control {
         text-transform: uppercase;
         margin: 0 2px;
@@ -31,6 +34,21 @@
         &.mixitup-control-active {
             background: $light;
             color: $secondary;
+        }
+    }
+
+    &.mixitup-controls-white {
+        .control {
+            &:hover {
+                &:not(.mixitup-control-active) {
+                    background: $white;
+                }
+            }
+
+            &.mixitup-control-active {
+                background: $white;
+                color: $secondary;
+            }
         }
     }
 }

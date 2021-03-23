@@ -151,6 +151,24 @@
                 }
             }
         }
+        &.hover-effect{
+            overflow: hidden;
+            border-radius: $spacer/2;
+            border: none;
+            .card-img{
+                img{
+                   @include transition(.8s);
+                   transform: scale(1);
+                }
+            }
+            &:hover{
+                .card-img{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
     }
 
     &.card-testimonial {

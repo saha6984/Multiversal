@@ -16,13 +16,16 @@ body {
     line-height: 1.86;
     overflow: overlay;
 }
-.mtn-fti-atitle{
+
+.mtn-fti-atitle {
     margin-top: -$spacer*13;
 }
-.font-weight-500{
+
+.font-weight-500 {
     font-weight: 500;
 }
-.font-weight-600{
+
+.font-weight-600 {
     font-weight: 600;
 }
 
@@ -31,8 +34,8 @@ body {
 // }
 ::selection {
     color: $white;
-    background:$danger;
-  }
+    background: $danger;
+}
 
 
 
@@ -54,7 +57,7 @@ body {
     border-radius: 10px;
 }
 
-.pr-z3{
+.pr-z3 {
     position: relative;
     z-index: 3;
 }
@@ -120,7 +123,7 @@ body {
 }
 
 .bg-lr-image-02 {
-    background-image: url(../imgs/bg-title-01.png),url(../imgs/bg-title-02.png);
+    background-image: url(../imgs/bg-title-01.png), url(../imgs/bg-title-02.png);
     background-position: left bottom, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
@@ -153,38 +156,45 @@ body {
     @extend .bg-img-center-cover;
 }
 
-.inner-page-title{
-    .breadcrumb{
+.inner-page-title {
+    .breadcrumb {
         margin: 0;
         font-weight: 400;
         text-transform: uppercase;
-        a{
+
+        a {
             color: rgba($dark, 1);
             text-decoration: none;
-            
+
         }
-        .active{
+
+        .active {
             color: rgba($dark, .8);
         }
     }
-    h1{
+
+    h1 {
         font-size: 3rem;
         font-weight: 300;
         color: $dark;
+
         @media (min-width:1200px) {
             font-size: 5rem;
         }
     }
-    &:not(.bg-white){
-        .breadcrumb{
-            a{
+
+    &:not(.bg-white) {
+        .breadcrumb {
+            a {
                 color: rgba($white, 1);
             }
-            .active{
+
+            .active {
                 color: rgba($white, .8);
             }
         }
-        h1{
+
+        h1 {
             color: $white;
         }
     }
@@ -271,5 +281,50 @@ ul {
         &.has-scroll {
             right: 70px;
         }
+    }
+}
+
+.popup-image-gallery {
+    .item-size-4-3 {
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            padding-top: 75%;
+        }
+
+        .card-properties {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            .card-img {
+                height: 100%;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0px;
+    height: 0;
+    border-radius: $spacer/2;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }

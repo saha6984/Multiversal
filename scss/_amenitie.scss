@@ -1,0 +1,14 @@
+.amenitie {
+    .icon {
+        img {
+            width: auto;
+            height: 48px;
+        }
+    }
+    p{
+        margin-top: $spacer/2;
+        margin-bottom: 0;
+        font-size: 1rem;
+        // color: $dark;
+    }
+}

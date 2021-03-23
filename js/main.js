@@ -9,26 +9,63 @@
     $slickSliderMultiple = $('.multiple-items'),
     $slickSlidertestimonial = $('.testimonial-container'),
     $btnWhatsapp = $('.btn-whatsapp'),
+    $imgPlanGalleryPopup = $('.popup-plan-gallery'),
+    $imgGalleryPopup = $('.popup-image-gallery'),
+    $videoPopup = $('.popup-youtube'),
     $mixItUpGallery = $('.mixitup-container');
-
-  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#subnavbar-items',
-    offset: 30
-  });
-
-
-
-
 
 
 
   $document.ready(function () {
+
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#subnavbar-items',
+      offset: 0
+    });
 
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
     new WOW().init();
+
+    if ($videoPopup.length > 0) {
+      $videoPopup.magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+      });
+    }
+
+    if ($imgGalleryPopup.length > 0) {
+      $imgGalleryPopup.magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1]
+        }
+      });
+    }
+    if ($imgPlanGalleryPopup.length > 0) {
+      $imgPlanGalleryPopup.magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0, 1]
+        }
+      });
+    }
 
     if ($slickSlider.length > 0) {
       $slickSlider.slick({
